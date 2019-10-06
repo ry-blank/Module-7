@@ -30,8 +30,9 @@ def get_input():
     function to prompt user for input
     :return: returns a string
     """
-    pass
+    user_num = input("Please enter a number to add to your list: ")
+    return user_num
 
 
 if __name__ == '__main__':
-    make_list()
+    print(make_list())
