@@ -13,7 +13,16 @@ def make_list():
     function to return list of user input from function get_input()
     :return: returns list of user input
     """
-    pass
+    number_list = []
+    attempts = 3
+    for a in range(attempts):
+        try:
+            user_num = int(get_input())
+        except ValueError:
+            print("Please enter numbers only.")
+        else:
+            number_list.insert(len(number_list), user_num)
+    return number_list
 
 
 def get_input():
