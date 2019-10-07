@@ -19,9 +19,12 @@ def make_list():
         try:
             user_num = int(get_input())
         except ValueError:
-            print("Please enter numbers only.")
+            raise ValueError("Please enter numbers only.")
         else:
-            number_list.insert(len(number_list), user_num)
+            if user_num < 1 or user_num > 50:
+                raise ValueError("Sorry, only numbers between 1 and 50 may be entered.")
+            else:
+                number_list.insert(len(number_list), user_num)
     return number_list
 
 
