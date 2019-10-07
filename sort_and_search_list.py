@@ -25,7 +25,12 @@ def search_list(a_list, a_number):
     :param a_number: to search index
     :return: the index of item in list or item not found
     """
-    pass
+    try:
+        index_listing = a_list.index(a_number)
+    except ValueError:
+        return -1
+    else:
+        return index_listing
 
 
 if __name__ == '__main__':
