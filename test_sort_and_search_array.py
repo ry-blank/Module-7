@@ -10,7 +10,7 @@ class SearchArray(unittest.TestCase):
         self.assertEqual(sort_and_search_array.search_array([5, 10, 15, 20, 25], 30), -1)
 
     def test_sort_list(self):
-        self.assertEqual(sort_and_search_array.sort_list([5, 25, 10, 20, 15]), [0])
+        self.assertEqual(sort_and_search_array.sort_array([]), None)
 
 
 if __name__ == '__main__':

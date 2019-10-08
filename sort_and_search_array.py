@@ -12,7 +12,10 @@ def sort_array(a_array):
     function to sort array of user input
     :param a_array: array of user input
     """
-    pass
+    try:
+        a_array.sort()
+    except ValueError:
+        return -1
 
 
 def search_array(a_array, a_number):
@@ -32,3 +35,6 @@ def search_array(a_array, a_number):
 
 if __name__ == '__main__':
     sort_array()
+    a_array = [5, 10, 15, 20, 25]
+    sort_array(a_array)
+    print(a_array)
