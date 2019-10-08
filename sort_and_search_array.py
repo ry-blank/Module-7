@@ -22,7 +22,12 @@ def search_array(a_array, a_number):
     :param a_number: to search index
     :return: the index of item in array or item not found
     """
-    pass
+    try:
+        index_listing = a_array.index(a_number)
+    except ValueError:
+        return -1
+    else:
+        return index_listing
 
 
 if __name__ == '__main__':
