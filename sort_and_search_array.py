@@ -5,36 +5,34 @@ Last Date Modified: 10/7/2019
 
 The purpose of this program is to .
 """
+import array as arr
 
 
-def sort_array(a_array):
+def sort_array(sorted_array):
     """
     function to sort array of user input
-    :param a_array: array of user input
+    :param sorted_array: array of user input
     """
-    try:
-        a_array.sort()
-    except ValueError:
-        return -1
+    d = sorted_array.tolist()
+    d.sort()
+    sorted_array = arr.array('d', d)
+    return sorted_array
 
 
-def search_array(a_array, a_number):
+def search_array(b_array, value):
     """
     function to search array for item
-    :param a_array: list from user input
-    :param a_number: to search index
+    :param b_array: array of user input
+    :param value: to search index
     :return: the index of item in array or item not found
     """
     try:
-        index_listing = a_array.index(a_number)
+        return b_array.index(value)
     except ValueError:
         return -1
-    else:
-        return index_listing
 
 
 if __name__ == '__main__':
-    sort_array()
-    a_array = [5, 10, 15, 20, 25]
-    sort_array(a_array)
-    print(a_array)
+    a = arr.array('d', [1.2, 6.3, 3.4])
+    search_array(a, 2.5)
+    print(sort_array(a))
